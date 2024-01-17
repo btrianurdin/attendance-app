@@ -1,3 +1,3 @@
-# presensi_pintar_ta
+# Attendance APP Flutter
 
 A new Flutter project.
