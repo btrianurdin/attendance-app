@@ -1,0 +1,135 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    /* Global */
+    body {
+        @apply bg-gray-100 font-poppins text-gray-700;
+    }
+    .no-sort {
+        @apply before:!hidden after:!hidden;
+    }
+}
+
+@layer components {
+    /* Alert */
+    .alert {
+        @apply p-3 mb-4 text-white border border-inherit rounded-lg;
+    }
+
+    /* Form */
+    .text-field,
+    .select {
+        @apply border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent shadow-sm
+      w-full p-3 transition-all duration-300 disabled:cursor-not-allowed;
+    }
+    .text-field.is-error,
+    .select.is-error {
+        @apply border-red-500;
+    }
+    .form-label {
+        @apply mb-2 text-base inline-block;
+    }
+    .validation-error {
+        @apply text-red-500 text-sm my-2;
+    }
+
+    /* Button */
+    .btn {
+        @apply p-3;
+    }
+
+    .sidebar-menu {
+        @apply flex flex-col gap-2 mb-4 pt-3;
+    }
+    .sidebar-menu-item {
+        @apply flex items-center gap-3 p-3 cursor-pointer rounded-lg hover:bg-white hover:bg-opacity-80
+      hover:text-teal-800 transition-all duration-300;
+    }
+    .sidebar-menu-item.is-active {
+        @apply bg-white bg-opacity-80 text-primary;
+    }
+
+    .card {
+        @apply bg-white;
+    }
+
+    .swal2-confirm {
+        @apply !bg-primary text-white;
+    }
+
+    #datatable_length {
+        @apply py-3;
+    }
+    #datatable_length > label {
+        @apply !flex items-center gap-3;
+    }
+    #datatable_length select {
+        @apply !rounded-lg px-3 w-[70px];
+    }
+
+    #datatable_wrapper .dataTables_paginate .paginate_button.current {
+        @apply !btn !btn-primary;
+    }
+
+    .calendar-table .active {
+        @apply !bg-primary;
+    }
+
+    .select2-hidden-accessible.is-error + .select2 .select2-selection {
+        @apply !border-red-500;
+    }
+
+    .select2.select2-container {
+        @apply !w-full !font-poppins;
+    }
+    .select2.select2-container .select2-selection {
+        @apply border border-gray-300 !rounded-lg select;
+    }
+
+    .select2.select2-container .select2-selection .select2-selection__rendered {
+        @apply !p-0;
+    }
+
+    .select2.select2-container .select2-selection .select2-selection__arrow {
+        @apply hidden;
+    }
+
+    .select2.select2-container.select2-container--open
+        .select2-selection.select2-selection--single {
+        /* background: #f8f8f8; */
+        @apply ring-2 ring-primary;
+    }
+
+    .select2-container .select2-dropdown {
+        @apply !my-10 shadow-md;
+    }
+
+    .select2-container .select2-dropdown .select2-search {
+        @apply font-poppins p-1 border-t;
+    }
+
+    .select2-container .select2-dropdown .select2-search input {
+        @apply outline-none !bg-transparent border-0 p-2 rounded-md ring-1 ring-gray-300;
+    }
+
+    .select2-container .select2-dropdown .select2-results {
+        @apply border-0;
+    }
+
+    .select2-container .select2-dropdown .select2-results ul {
+        @apply bg-white;
+    }
+    .select2-container .select2-dropdown .select2-results ul li {
+        @apply p-2;
+    }
+
+    .select2-container
+        .select2-dropdown
+        .select2-results
+        ul
+        .select2-results__option--highlighted[aria-selected] {
+        @apply bg-primary;
+    }
+}
